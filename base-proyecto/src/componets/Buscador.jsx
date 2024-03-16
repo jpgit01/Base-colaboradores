@@ -1,11 +1,16 @@
-function Buscador() {
+import Form from "react-bootstrap/Form";
+function Buscador({ search, handleOnChange }) {
+  return (
+    <>
+      <Form.Control
+        id="unico"
+        className=" mt-3 mb-3"
+        placeholder="busca un colaborador"
+        value={search}
+        onChange={handleOnChange}
+      />
+    </>
+  );
+}
 
-    return (
-      <>
-        <h1>Buscador</h1>
-      </>
-    )
-  }
-  
-  export default Buscador
-  
+export default Buscador;

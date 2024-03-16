@@ -1,6 +1,6 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.titulo{
+  font-size: 3rem;
+}
+.subtitulo{
+  font-size: 2rem;
 }

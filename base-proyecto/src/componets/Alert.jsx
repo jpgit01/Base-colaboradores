@@ -1,11 +1,13 @@
-function Alert() {
+import Alert from 'react-bootstrap/Alert';
 
-    return (
-      <>
-        <h1>Alert</h1>
-      </>
-    )
-  }
-  
-  export default Alert
-  
+function AlertPrincipal({tipo, mensaje}) {
+  return (
+    <>
+    <Alert variant={tipo}>
+      <Alert.Heading>{mensaje}</Alert.Heading>
+    </Alert>
+    </>
+  );
+}
+
+export default AlertPrincipal;
