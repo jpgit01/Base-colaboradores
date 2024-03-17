@@ -1,6 +1,7 @@
 import Table from "react-bootstrap/Table"
+import Button from 'react-bootstrap/Button';
 
-function Listado({colaboradores}) {
+function Listado({colaboradores, onDelete}) {
 
     return (
         <Table responsive bordered striped>
@@ -11,6 +12,7 @@ function Listado({colaboradores}) {
               <th>Edad</th>
               <th>Cargo</th>
               <th>Teléfono</th>
+              <th>Remover</th>
             </tr>
           </thead>
           <tbody>
@@ -21,6 +23,7 @@ function Listado({colaboradores}) {
                 <td>{colaborador.edad}</td>
                 <td>{colaborador.cargo}</td>
                 <td>{colaborador.telefono}</td>
+                <td><div className="d-grid gap-2"><Button variant="danger" size="sm" onClick={() => onDelete(colaborador.id)}>Eliminar</Button></div></td>
               </tr>
             ))}
           </tbody>
